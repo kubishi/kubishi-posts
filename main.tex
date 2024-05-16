@@ -1,0 +1,161 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{authblk}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{nameref}
+\usepackage{placeins}
+\usepackage{hyperref}
+\usepackage{biblatex}
+\usepackage[dvipsnames]{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={blue!80!black},
+    citecolor={blue!80!black},
+    urlcolor={blue!80!black}
+}
+
+\usepackage{lipsum}
+\usepackage{enumitem}
+
+% Command for writing comments
+\newcommand\JC[1]{{\color{Maroon} JC: #1}}         % Jared:    Use \JC{my note}
+
+\newcommand*{\doi}[1]{DOI: \href{http://dx.doi.org/#1}{#1}}\setitemize{noitemsep,topsep=5pt,parsep=2pt,partopsep=0pt}
+
+% bibliography
+\addbibresource{main.bib}
+% Redefine the bibliography heading to use \subsection size
+\defbibheading{bibsection}[title]{%
+  \subsection*{#1}%
+}
+
+
+
+% SETUP
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem*{problem}{Problem}
+
+\title{LLMs and Low/No-Resource Languages}
+\author{Jared Coleman}
+\affil{Loyola Marymount University}
+
+\date{}
+
+\begin{document}
+\maketitle
+
+% \begin{abstract}
+% \lipsum[1]
+% \end{abstract}
+
+
+\section*{Introduction}
+This is an informal, ever-changing collection of interesting papers on the current limitations and potential of Large Language Models (LLMs) for low- and no-resource language tasks.
+LLMs have been shown to exhibit remarkable capability for a wide variety of natural language tasks including machine translation, summarizing, question-and-answering, auto-completion, dialog, and more~\cite{gpt:agi}.
+LLMs are trained on vast amounts of natural language data from the internet~\cite{gpt:gpt4-tech-report} and, as a result, are much less performant for low/no-resource language tasks.
+We refer to languages as those with very little publicly available corpora for training machine learning or statistic models as ``low-resource'' languages and those with \textit{no} publicly available corpora as ``no-resource'' languages.
+
+
+\subsection*{Research Areas}
+\begin{itemize}
+    \item How do models ``know'' language? This is important for understanding how they might be taught new languages from scratch. By taught, I don't mean fine-tuned or trained (in the ML sense of the word ``train''). Rather, I meant \textit{taught} like a human is taught language: through dialog, question and answering, context, and experience.
+    \begin{itemize}
+        \item Black-box experimentation: The past few decades have seen many advances in linguistics through creative black-box experiments.
+        \item Linguistic Probing: We can perform experiments and ``brain-scan'' models to see which parts of the underlying network activate to better understand how they work! Interestingly, this has only relatively recently become possible (still with extreme limitations) for humans (via MRI).
+        \item I care less about whether or not LLMs learn \textit{like} humans and more about understanding how LLMs learn so that we can leverage the knowledge to build useful tools for low/no-resource languages.
+    \end{itemize}
+    \item How can we use popular LLM tool-building techniques to create tools for the documentation, preservation, and revitalization of endangered languages?
+    \begin{itemize}
+        \item In the context window: few-shot learning, prompt engineering, function calling. We proposed a new approach for low/no-resource language machine translation using a combination of these techniques~\cite{llm-rbmt}.
+        \item Tokenization: Can adding tokens for target language words help with natural language tasks?
+        \item Finetuning: with limited data, fine-tuning is difficult.
+    \end{itemize}
+    \item How can LLMs be used for foreign language education
+    \begin{itemize}
+        \item Ultimately, the goal of endangered language revitalization is to create new \textit{human} speakers.
+        \item How can LLMs be used effectively in language education?
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Useful tools for no/low-resource languages that LLMs can help with}
+This is a list of potential tools that would be useful for low/no-resource language revitalization efforts and that this research will help enable the development of:
+\begin{itemize}
+    \item Parsing linguistic literature for grammar, vocabulary, etc.
+    \item Summarizing/explaining content for language learners
+    \item Grammar induction
+    \item Auto-completion
+    \item Data sanitization/standardization
+    \item Adaptive data collection: using an LLM to help adjust the questions or queries made to native speakers during data collection to gather the most relevant and useful information.
+    \begin{itemize}
+        \item An interesting question: When 
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Special concerns for indigenous communities}
+\begin{itemize}
+    \item Data privacy, protection of sacred language
+\end{itemize}
+
+\newpage
+\section*{Bibliography}
+The following bibliography is organized into different categories.
+Some papers apply to more than one category and therefore appear multiple times.
+
+\nocite{*}
+\printbibliography[
+    heading=bibsection,
+    keyword={llm},
+    title={Work on LLMs (Large Language Models)}
+]
+\printbibliography[
+    heading=bibsection,
+    keyword={low-resource},
+    title={Work on Low-Resource Languages}
+]
+\printbibliography[
+    heading=bibsection,
+    keyword={rbmt},
+    title={Work on RBMT (Rule-Based Machine Translation)}
+]
+\printbibliography[
+    heading=bibsection,
+    keyword={rag},
+    title={Work on RAG (Retrieval Augmented Generation)}
+]
+\printbibliography[
+    heading=bibsection,
+    keyword={embeddings},
+    title={Work on Embeddings \& Semantic Similarity}
+]
+\printbibliography[
+    heading=bibsection,
+    keyword={linguistic-probing},
+    title={Work on Linguistic Probing}
+]
+
+\printbibliography[
+    heading=bibsection,
+    keyword={embeddings-models},
+    title={Embeddings Models}
+]
+\printbibliography[
+    heading=bibsection,
+    keyword={other},
+    title={Other References}
+]
+
+
+\end{document}
