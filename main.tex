@@ -50,7 +50,7 @@
 
 \title{LLMs and Low/No-Resource Languages}
 \author{Jared Coleman}
-\affil{Loyola Marymount University}
+% \affil{Loyola Marymount University}
 
 \date{}
 
@@ -63,19 +63,19 @@
 
 
 \section*{Introduction}
-This is an informal, ever-changing collection of interesting papers on the current limitations and potential of Large Language Models (LLMs) for low- and no-resource language tasks.
+This is an informal, ever-changing collection of interesting papers related to current limitations and potential in Large Language Models (LLMs) for low- and no-resource language tasks.
 LLMs have been shown to exhibit remarkable capability for a wide variety of natural language tasks including machine translation, summarizing, question-and-answering, auto-completion, dialog, and more~\cite{gpt:agi}.
-LLMs are trained on vast amounts of natural language data from the internet~\cite{gpt:gpt4-tech-report} and, as a result, are much less performant for low/no-resource language tasks.
-We refer to languages as those with very little publicly available corpora for training machine learning or statistic models as ``low-resource'' languages and those with \textit{no} publicly available corpora as ``no-resource'' languages.
+LLMs are trained on vast amounts of natural language data from the internet~\cite{gpt:gpt4-tech-report} and, as a result, do not perform as well for low- or no-resource languages~\cite{palm,gpt:low-resource-translation}.
+We refer to languages with very little publicly available bilingual or monolingual corpora as ``low-resource'' languages and those with \textit{no} publicly available corpora as ``no-resource'' languages.
 
-
-\subsection*{Research Areas}
+\subsection*{Research Questions}
+In exploring how LLMs might be used for endangered language preservation and revitalization, we have identified the following research questions as some of the most interesting and important:
 \begin{itemize}
-    \item How do models ``know'' language? This is important for understanding how they might be taught new languages from scratch. By taught, I don't mean fine-tuned or trained (in the ML sense of the word ``train''). Rather, I meant \textit{taught} like a human is taught language: through dialog, question and answering, context, and experience.
+    \item How do models ``know'' language? This is important for understanding how they might be taught new languages from scratch. By taught, I don't mean fine-tuned or trained (in the ML sense of the word ``train''). Rather, I mean \textit{taught} like a human is taught language: through dialog, question and answering, context, and experience.
     \begin{itemize}
         \item Black-box experimentation: The past few decades have seen many advances in linguistics through creative black-box experiments.
         \item Linguistic Probing: We can perform experiments and ``brain-scan'' models to see which parts of the underlying network activate to better understand how they work! Interestingly, this has only relatively recently become possible (still with extreme limitations) for humans (via MRI).
-        \item I care less about whether or not LLMs learn \textit{like} humans and more about understanding how LLMs learn so that we can leverage the knowledge to build useful tools for low/no-resource languages.
+        \item We care less about whether or not LLMs learn \textit{like} humans and more about understanding how LLMs learn so that we can leverage the knowledge to build useful tools for low/no-resource languages.
     \end{itemize}
     \item How can we use popular LLM tool-building techniques to create tools for the documentation, preservation, and revitalization of endangered languages?
     \begin{itemize}
@@ -90,8 +90,9 @@ We refer to languages as those with very little publicly available corpora for t
     \end{itemize}
 \end{itemize}
 
-\subsection*{Useful tools for no/low-resource languages that LLMs can help with}
-This is a list of potential tools that would be useful for low/no-resource language revitalization efforts and that this research will help enable the development of:
+\subsection*{Useful Tools Enabled by Research}
+Pursuing the above research questions will guide and enable the development of many practically useful tools for endangered language revitalization.
+Some of these tools include:
 \begin{itemize}
     \item Parsing linguistic literature for grammar, vocabulary, etc.
     \item Summarizing/explaining content for language learners
@@ -99,12 +100,10 @@ This is a list of potential tools that would be useful for low/no-resource langu
     \item Auto-completion
     \item Data sanitization/standardization
     \item Adaptive data collection: using an LLM to help adjust the questions or queries made to native speakers during data collection to gather the most relevant and useful information.
-    \begin{itemize}
-        \item An interesting question: When 
-    \end{itemize}
 \end{itemize}
 
 \subsection*{Special concerns for indigenous communities}
+When working with indigenous communities in language revitalization, history and context matter.
 \begin{itemize}
     \item Data privacy, protection of sacred language
 \end{itemize}
@@ -115,6 +114,11 @@ The following bibliography is organized into different categories.
 Some papers apply to more than one category and therefore appear multiple times.
 
 \nocite{*}
+\printbibliography[
+    heading=bibsection,
+    keyword={our-work},
+    title={Our Work}
+]
 \printbibliography[
     heading=bibsection,
     keyword={llm},
