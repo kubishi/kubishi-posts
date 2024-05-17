@@ -2,14 +2,14 @@
 
 git clean -fX
 
-# build main.tex, main.bib with biblatex
-pdflatex main.tex
-biber main
-pdflatex main.tex
-pdflatex main.tex
+# build llms-and-language.tex, llms-and-language.bib with biblatex
+pdflatex llms-and-language.tex
+biber llms-and-language
+pdflatex llms-and-language.tex
+pdflatex llms-and-language.tex
 
 
 # build html with numbered references
-htlatex main.tex
+htlatex llms-and-language.tex
 
 git clean -fX

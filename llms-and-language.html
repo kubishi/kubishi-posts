@@ -6,8 +6,8 @@
 <meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)"> 
 <meta name="originator" content="TeX4ht (https://tug.org/tex4ht/)"> 
 <!-- html --> 
-<meta name="src" content="main.tex"> 
-<link rel="stylesheet" type="text/css" href="main.css"> 
+<meta name="src" content="llms-and-language.tex"> 
+<link rel="stylesheet" type="text/css" href="llms-and-language.css"> 
 </head><body 
 >
    <div class="maketitle">
@@ -24,20 +24,20 @@ class="ecrm-1200">Jared Coleman</span></div>
    </div>
    <h3 class="likesectionHead"><a 
  id="x1-1000"></a>Introduction</h3>
-<!--l. 66--><p class="noindent" >This is an informal, ever-changing collection of interesting papers related to current limitations and potential in
-Large Language Models (LLMs) for low- and no-resource language tasks. LLMs have been shown to exhibit
-remarkable capability for a wide variety of natural language tasks including machine translation, summarizing,
-question-and-answering, auto-completion, dialog, and more&#x00A0;[<a 
+<!--l. 66--><p class="noindent" >This is an informal, ever-changing collection of interesting papers and resources related to Large Language Models
+(LLMs) and language revitalization. LLMs have been shown to be remarkably capable at a wide variety of natural
+language tasks including machine translation, summarizing, question-and-answering, auto-completion,
+dialog, and more&#x00A0;[<a 
  id="x1-1001"></a><a 
-href="#cite.0@gpt:agi">2</a>]. LLMs are trained on vast amounts of natural
-language data from the internet&#x00A0;[<a 
+href="#cite.0@gpt:agi">3</a>]. State-of-the-art LLMs are trained on vast amounts of natural language data
+from the internet&#x00A0;[<a 
  id="x1-1002"></a><a 
-href="#cite.0@gpt:gpt4-tech-report">19</a>] and, as a result, do not perform as well for low- or no-resource
+href="#cite.0@gpt:gpt4-tech-report">21</a>] and, as a result, do not perform as well on tasks that involve low/no-resource
 languages&#x00A0;[<a 
  id="x1-1003"></a><a 
-href="#cite.0@palm">4</a>, <a 
+href="#cite.0@palm">5</a>, <a 
  id="x1-1004"></a><a 
-href="#cite.0@gpt:low-resource-translation">27</a>]. We refer to languages with very little publicly available bilingual or monolingual
+href="#cite.0@gpt:low-resource-translation">30</a>]. We refer to languages with very little publicly available bilingual or monolingual
 corpora as &#8220;low-resource&#8221; languages and those with <span 
 class="ecti-1000">no </span>publicly available corpora as &#8220;no-resource&#8221;
 languages.
@@ -56,7 +56,14 @@ class="ecti-1000">taught </span>like a human is taught language: through dialog,
          <ul class="itemize2">
          <li class="itemize">
          <!--l. 76--><p class="noindent" >Black-box experimentation: The past few decades have seen many advances in linguistics through
-         creative black-box experiments.
+         creative black-box experiments&#x00A0;[<a 
+ id="x1-2001"></a><a 
+href="#cite.0@atoms">2</a>, <a 
+ id="x1-2002"></a><a 
+href="#cite.0@through-the-language-glass">9</a>, <a 
+ id="x1-2003"></a><a 
+href="#cite.0@language-instinct">24</a>]. Can these be recreated with LLMs? How might the
+         results differ and what might that tell us about how LLMs &#8220;know&#8221; language?
          </li>
          <li class="itemize">
          <!--l. 77--><p class="noindent" >Linguistic Probing: We can perform experiments and &#8220;brain-scan&#8221; models to see which parts of
@@ -76,17 +83,17 @@ class="ecti-1000">like </span>humans and more about understanding how
      and revitalization of endangered languages?
          <ul class="itemize2">
          <li class="itemize">
-         <!--l. 82--><p class="noindent" >In the context window: few-shot learning, prompt engineering, function calling. We proposed a
-         new approach for low/no-resource language machine translation using a combination of these
+         <!--l. 82--><p class="noindent" >In the context window: few-shot learning, prompt engineering, function calling, etc. We proposed
+         a new approach for low/no-resource language machine translation using a combination of these
          techniques&#x00A0;[<a 
- id="x1-2001"></a><a 
-href="#cite.0@llm-rbmt">6</a>].
+ id="x1-2004"></a><a 
+href="#cite.0@llm-rbmt">7</a>].
          </li>
          <li class="itemize">
          <!--l. 83--><p class="noindent" >Tokenization: Can adding tokens for target language words help with natural language tasks?
          </li>
          <li class="itemize">
-         <!--l. 84--><p class="noindent" >Finetuning: with limited data, fine-tuning is difficult.</li></ul>
+         <!--l. 84--><p class="noindent" >Fine-tuning: with limited data, fine-tuning is difficult.</li></ul>
      </li>
      <li class="itemize">
      <!--l. 86--><p class="noindent" >How can LLMs be used for foreign language education
@@ -96,13 +103,16 @@ href="#cite.0@llm-rbmt">6</a>].
 class="ecti-1000">human </span>speakers.
          </li>
          <li class="itemize">
-         <!--l. 89--><p class="noindent" >How can LLMs be used effectively in language education?</li></ul>
+         <!--l. 89--><p class="noindent" >How can LLMs be used effectively in language education? We proposed a new approach for using
+         LLMs as practice partners and tutors for language learning&#x00A0;[<a 
+ id="x1-2005"></a><a 
+href="#cite.0@yu2023chatlang">36</a>].</li></ul>
      </li></ul>
 <!--l. 93--><p class="noindent" >
    <h4 class="likesubsectionHead"><a 
  id="x1-3000"></a>Useful Tools Enabled by Research</h4>
 <!--l. 94--><p class="noindent" >Pursuing the above research questions will guide and enable the development of many practically useful tools for
-endangered language revitalization. Some of these tools include:
+endangered language revitalization. Some of these include:
      <ul class="itemize1">
      <li class="itemize">
      <!--l. 97--><p class="noindent" >Parsing linguistic literature for grammar, vocabulary, etc.
@@ -113,9 +123,9 @@ endangered language revitalization. Some of these tools include:
      <li class="itemize">
      <!--l. 99--><p class="noindent" >Grammar induction
      </li>
+                                                                                         
+                                                                                         
      <li class="itemize">
-                                                                                         
-                                                                                         
      <!--l. 100--><p class="noindent" >Auto-completion
      </li>
      <li class="itemize">
@@ -127,44 +137,50 @@ endangered language revitalization. Some of these tools include:
 <!--l. 105--><p class="noindent" >
    <h4 class="likesubsectionHead"><a 
  id="x1-4000"></a>Special Concerns for Indigenous Communities</h4>
-<!--l. 106--><p class="noindent" >When working with indigenous communities in language revitalization, history and context matter. Genocide and
-forced assimilation&#x00A0;[<a 
+<!--l. 106--><p class="noindent" >When working on language revitalization efforts with indigenous communities, history and context matter. Genocide
+and forced assimilation&#x00A0;[<a 
  id="x1-4001"></a><a 
-href="#cite.0@genocide">15</a>] have led to the endangerment of many indigenous cultures and languages throughout the
-United States. In Boarding Schools, indigenous children were forced to abandon their languages and cultures in
-favor of English and Christianity&#x00A0;[<a 
+href="#cite.0@genocide">17</a>] have led to the endangerment of many indigenous cultures and languages
+throughout the United States. At Indian boarding schools, which were established to turn the surviving
+indigenous population into a servile class, children were forced to abandon their native languages and
+cultures&#x00A0;[<a 
  id="x1-4002"></a><a 
-href="#cite.0@to-remain-an-indian">14</a>].
-<!--l. 110--><p class="indent" >   Even more modern efforts in language documentation and revitalization can be harmful. My tribe, for example,
-prohibits the telling of traditional stories except in the winter months. To document these stories and make them
-publicly available would violate this important tradition. Different indigenous communities have different
+href="#cite.0@to-remain-an-indian">16</a>].
+<!--l. 110--><p class="indent" >   Even the more modern and well-intentioned efforts to document and revitalize indigenous languages are not
+without their own ethical concerns. My tribe, for example, prohibits telling some traditional stories except
+during the winter. To document these stories and make them publicly available throughout the year
+would undermine this culturally important tradition. Different indigenous communities have different
 boundaries and rules for what is appropriate to share and what is not. It is important to respect these
 boundaries and to work with communities to ensure that the work being done is culturally appropriate and
 respectful.
-<!--l. 116--><p class="indent" >   Finally, it is imperative that indigenous communities reap the benefits of the work being done to document and
+<!--l. 116--><p class="indent" >   Finally, it is imperative that indigenous communities benefit from the work being done to document and
 revitalize their languages. This means that the tools and resources developed should be made available to the
-communities in a way that is accessible and useful to them. Another personal example: my great-grandmother was a
-fluent speaker of our language and so was the subject of a study on our language by a University of California, San
-Diego Ph.D. student studying linguistics. His thesis "A Grammar Sketch And Comparative Study Of Eastern
-Mono"&#x00A0;[<a 
+communities in a way that is accessible and useful to them. Another personal example: my great-grandmother was
+a fluent speaker of our language and so was the subject of a study by the University of California,
+San Diego Ph.D. student, Evan Norris. His thesis "A Grammar Sketch And Comparative Study Of
+Eastern Mono"&#x00A0;[<a 
  id="x1-4003"></a><a 
-href="#cite.0@mnr_grammar">18</a>] is locked behind a Proquest academic paywall and almost impossible for my family and other tribal
-members to access.
-<!--l. 121--><p class="indent" >
+href="#cite.0@mnr_grammar">20</a>], an invaluable resource for our critically endangered language, is locked behind
+a ProQuest academic paywall and is almost impossible for my family and other tribal members to
+access.
+<!--l. 121--><p class="indent" >   In our research on using LLMs for endangered language revitalization, we commit to respecting the boundaries
+and rules of the communities we work with and to making the research output accessible and useful to those
+communities.
+<!--l. 123--><p class="indent" >
                                                                                          
                                                                                          
    <h3 class="likesectionHead"><a 
  id="x1-5000"></a>Bibliography</h3>
-<!--l. 123--><p class="noindent" >The following bibliography is organized into different categories. Some papers apply to more than one category and
+<!--l. 125--><p class="noindent" >The following bibliography is organized into different categories. Some papers apply to more than one category and
 therefore appear multiple times.
-<!--l. 131--><p class="noindent" >
+<!--l. 133--><p class="noindent" >
    <h4 class="likesubsectionHead"><a 
  id="x1-6000"></a>Our Work</h4>
-<!--l. 131--><p class="noindent" >
+<!--l. 133--><p class="noindent" >
      <dl class="thebibliography"><dt id="X0-llm-rbmt" class="thebibliography">
- [6]  </dt><dd 
+ [7]  </dt><dd 
 id="bib-1" class="thebibliography">
-     <!--l. 131--><p class="noindent" ><a 
+     <!--l. 133--><p class="noindent" ><a 
  id="cite.0@llm-rbmt"></a>Jared Coleman et al. <span 
 class="ecti-1000">LLM-Assisted Rule Based Machine Translation for Low/No-Resource Languages</span>.
      2024. <span 
@@ -174,9 +190,9 @@ class="small-caps">o</span><span
 class="small-caps">i</span></span>:  <a 
 href="https://doi.org/10.48550/arXiv.2405.08997" >10.48550/arXiv.2405.08997</a>.
      </dd><dt id="X0-yu2023chatlang" class="thebibliography">
-[33]  </dt><dd 
+[36]  </dt><dd 
 id="bib-2" class="thebibliography">
-     <!--l. 131--><p class="noindent" ><a 
+     <!--l. 133--><p class="noindent" ><a 
  id="cite.0@yu2023chatlang"></a>Sheng                        Yu,                        Jared                        Coleman,                        and
      Bhaskar Krishnamachari. &#8220;Chatlang: A Two-Window Approach to Chatbots for Language Learning&#8221;.
      In: (2023). <span 
@@ -186,14 +202,14 @@ class="small-caps">r</span><span
 class="small-caps">l</span></span>: <a 
 href="https://anrg.usc.edu/www/papers/chatlang.pdf" class="url" ><span 
 class="ectt-1000">https://anrg.usc.edu/www/papers/chatlang.pdf</span></a>.</dd></dl>
-<!--l. 136--><p class="noindent" >
+<!--l. 138--><p class="noindent" >
    <h4 class="likesubsectionHead"><a 
  id="x1-7000"></a>Work on LLMs (Large Language Models)</h4>
-<!--l. 136--><p class="noindent" >
+<!--l. 138--><p class="noindent" >
      <dl class="thebibliography"><dt id="X0-gpt:agi" class="thebibliography">
- [2]  </dt><dd 
+ [3]  </dt><dd 
 id="bib-3" class="thebibliography">
-     <!--l. 136--><p class="noindent" ><a 
+     <!--l. 138--><p class="noindent" ><a 
  id="cite.0@gpt:agi"></a>Sébastien Bubeck et al. &#8220;Sparks of Artificial General Intelligence: Early experiments with GPT-4&#8221;. In:
      (2023). <span 
 class="eccc1000-"><span 
@@ -202,9 +218,9 @@ class="small-caps">o</span><span
 class="small-caps">i</span></span>:  <a 
 href="https://doi.org/10.48550/arXiv.2303.08774" >10.48550/arXiv.2303.08774</a>.
      </dd><dt id="X0-palm" class="thebibliography">
- [4]  </dt><dd 
+ [5]  </dt><dd 
 id="bib-4" class="thebibliography">
-     <!--l. 136--><p class="noindent" ><a 
+     <!--l. 138--><p class="noindent" ><a 
  id="cite.0@palm"></a>Aakanksha Chowdhery et al. &#8220;PaLM: Scaling Language Modeling with Pathways&#8221;. In: (2022). <span 
 class="eccc1000-"><span 
 class="small-caps">d</span><span 
@@ -213,9 +229,9 @@ class="small-caps">i</span></span>:
      <a 
 href="https://doi.org/10.48550/arXiv.2204.02311" >10.48550/arXiv.2204.02311</a>.
      </dd><dt id="X0-trans:eval" class="thebibliography">
-[10]  </dt><dd 
+[12]  </dt><dd 
 id="bib-5" class="thebibliography">
-     <!--l. 136--><p class="noindent" ><a 
+     <!--l. 138--><p class="noindent" ><a 
  id="cite.0@trans:eval"></a>Amr Hendy et al. &#8220;How Good Are GPT Models at Machine Translation? A Comprehensive Evaluation&#8221;.
      In: (2023). <span 
 class="eccc1000-"><span 
@@ -224,9 +240,9 @@ class="small-caps">o</span><span
 class="small-caps">i</span></span>:  <a 
 href="https://doi.org/10.48550/arXiv.2302.09210" >10.48550/arXiv.2302.09210</a>.
      </dd><dt id="X0-low_resource_finetune_irish" class="thebibliography">
-[12]  </dt><dd 
+[14]  </dt><dd 
 id="bib-6" class="thebibliography">
-     <!--l. 136--><p class="noindent" ><a 
+     <!--l. 138--><p class="noindent" ><a 
  id="cite.0@low_resource_finetune_irish"></a>Séamus Lankford, Haithem Afli, and Andy Way. &#8220;adaptMLLM: Fine-Tuning Multilingual Language
      Models on Low-Resource Languages with Integrated LLM Playgrounds&#8221;. In: <span 
 class="ecti-1000">Inf. </span>14.12 (2023), p.&#x00A0;638.
@@ -237,9 +253,9 @@ class="small-caps">o</span><span
 class="small-caps">i</span></span>:  <a 
 href="https://doi.org/10.3390/INFO14120638" >10.3390/INFO14120638</a>.
      </dd><dt id="X0-rag" class="thebibliography">
-[13]  </dt><dd 
+[15]  </dt><dd 
 id="bib-7" class="thebibliography">
-     <!--l. 136--><p class="noindent" ><a 
+     <!--l. 138--><p class="noindent" ><a 
  id="cite.0@rag"></a>Patrick S.&#x00A0;H. Lewis et al. &#8220;Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks&#8221;. In:
      <span 
 class="ecti-1000">Advances in Neural Information Processing Systems 33: Annual Conference on Neural Information</span>
@@ -253,9 +269,9 @@ class="small-caps">l</span></span>: <a
 href="https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html" class="url" ><span 
 class="ectt-1000">https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html</span></a>.
      </dd><dt id="X0-gpt:gpt4-tech-report" class="thebibliography">
-[19]  </dt><dd 
+[21]  </dt><dd 
 id="bib-8" class="thebibliography">
-     <!--l. 136--><p class="noindent" ><a 
+     <!--l. 138--><p class="noindent" ><a 
  id="cite.0@gpt:gpt4-tech-report"></a>OpenAI. &#8220;GPT-4 Technical Report&#8221;. In: (2023). <span 
 class="eccc1000-"><span 
 class="small-caps">d</span><span 
@@ -265,9 +281,9 @@ href="https://doi.org/10.48550/arXiv.2303.08774" >10.48550/arXiv.2303.08774</a>.
                                                                                          
                                                                                          
      </dd><dt id="X0-gpt:low-resource-translation" class="thebibliography">
-[27]  </dt><dd 
+[30]  </dt><dd 
 id="bib-9" class="thebibliography">
-     <!--l. 136--><p class="noindent" ><a 
+     <!--l. 138--><p class="noindent" ><a 
  id="cite.0@gpt:low-resource-translation"></a>Nathaniel  R.  Robinson  et  al.  &#8220;ChatGPT  MT:  Competitive  for  High-  (but  not  Low-)  Resource
      Languages&#8221;. In: (2023). <span 
 class="eccc1000-"><span 
@@ -275,38 +291,14 @@ class="small-caps">d</span><span
 class="small-caps">o</span><span 
 class="small-caps">i</span></span>:  <a 
 href="https://doi.org/10.48550/arXiv.2309.07423" >10.48550/arXiv.2309.07423</a>.</dd></dl>
-<!--l. 141--><p class="noindent" >
+<!--l. 143--><p class="noindent" >
    <h4 class="likesubsectionHead"><a 
  id="x1-8000"></a>Work on Low-Resource Languages</h4>
-<!--l. 141--><p class="noindent" >
-     <dl class="thebibliography"><dt id="X0-baird" class="thebibliography">
- [1]  </dt><dd 
+<!--l. 143--><p class="noindent" >
+     <dl class="thebibliography"><dt id="X0-trans:low-resource-survey" class="thebibliography">
+[11]  </dt><dd 
 id="bib-10" class="thebibliography">
-     <!--l. 141--><p class="noindent" ><a 
- id="cite.0@baird"></a>Jessie Little Doe Baird. &#8220;Wopanaak language reclamation program: bringing the language home&#8221;.
-     Journal of Global Indigeneity, 2(2). 2016. <span 
-class="eccc1000-"><span 
-class="small-caps">u</span><span 
-class="small-caps">r</span><span 
-class="small-caps">l</span></span>: <a 
-href="https://ro.uow.edu.au/jgi/vol2/iss2/7" class="url" ><span 
-class="ectt-1000">https://ro.uow.edu.au/jgi/vol2/iss2/7</span></a>.
-     </dd><dt id="X0-CoronelMolina2016IndigenousLR" class="thebibliography">
- [7]  </dt><dd 
-id="bib-11" class="thebibliography">
-     <!--l. 141--><p class="noindent" ><a 
- id="cite.0@CoronelMolina2016IndigenousLR"></a>Serafín  M.  Coronel-Molina  and  Teresa  L.  McCarty.  &#8220;Indigenous  Language  Revitalization  in  the
-     Americas&#8221;. In: 2016. <span 
-class="eccc1000-"><span 
-class="small-caps">u</span><span 
-class="small-caps">r</span><span 
-class="small-caps">l</span></span>: <a 
-href="https://api.semanticscholar.org/CorpusID:217243422" class="url" ><span 
-class="ectt-1000">https://api.semanticscholar.org/CorpusID:217243422</span></a>.
-     </dd><dt id="X0-trans:low-resource-survey" class="thebibliography">
- [9]  </dt><dd 
-id="bib-12" class="thebibliography">
-     <!--l. 141--><p class="noindent" ><a 
+     <!--l. 143--><p class="noindent" ><a 
  id="cite.0@trans:low-resource-survey"></a>Barry Haddow et al. &#8220;Survey of Low-Resource Machine Translation&#8221;. In: <span 
 class="ecti-1000">Computational Linguistics</span>
      48.3   (Sept.   2022),   pp.&#x00A0;673&#8211;732.   <span 
@@ -324,9 +316,9 @@ href="https://doi.org/10.1162/coli\_a\_00446" >10.1162/coli\_a\_00446</a>.   epr
 href="https://direct.mit.edu/coli/article-pdf/48/3/673/2040361/coli\_a\_00446.pdf" class="url" ><span 
 class="ectt-1000">https://direct.mit.edu/coli/article-pdf/48/3/673/2040361/coli\_a\_00446.pdf</span></a>.
      </dd><dt id="X0-low_resource_finetune_irish" class="thebibliography">
-[12]  </dt><dd 
-id="bib-13" class="thebibliography">
-     <!--l. 141--><p class="noindent" >Séamus Lankford, Haithem Afli, and Andy Way. &#8220;adaptMLLM: Fine-Tuning Multilingual Language
+[14]  </dt><dd 
+id="bib-11" class="thebibliography">
+     <!--l. 143--><p class="noindent" >Séamus Lankford, Haithem Afli, and Andy Way. &#8220;adaptMLLM: Fine-Tuning Multilingual Language
      Models on Low-Resource Languages with Integrated LLM Playgrounds&#8221;. In: <span 
 class="ecti-1000">Inf. </span>14.12 (2023), p.&#x00A0;638.
      <span 
@@ -336,9 +328,9 @@ class="small-caps">o</span><span
 class="small-caps">i</span></span>:  <a 
 href="https://doi.org/10.3390/INFO14120638" >10.3390/INFO14120638</a>.
      </dd><dt id="X0-low_resource_survey" class="thebibliography">
-[23]  </dt><dd 
-id="bib-14" class="thebibliography">
-     <!--l. 141--><p class="noindent" ><a 
+[26]  </dt><dd 
+id="bib-12" class="thebibliography">
+     <!--l. 143--><p class="noindent" ><a 
  id="cite.0@low_resource_survey"></a>Surangika Ranathunga et al. &#8220;Neural Machine Translation for Low-resource Languages: A Survey&#8221;. In:
      <span 
 class="ecti-1000">ACM Comput. Surv. </span>55.11 (2023), 229:1&#8211;229:37. <span 
@@ -348,9 +340,9 @@ class="small-caps">o</span><span
 class="small-caps">i</span></span>:  <a 
 href="https://doi.org/10.1145/3567592" >10.1145/3567592</a>.
      </dd><dt id="X0-gpt:low-resource-translation" class="thebibliography">
-[27]  </dt><dd 
-id="bib-15" class="thebibliography">
-     <!--l. 141--><p class="noindent" >Nathaniel  R.  Robinson  et  al.  &#8220;ChatGPT  MT:  Competitive  for  High-  (but  not  Low-)  Resource
+[30]  </dt><dd 
+id="bib-13" class="thebibliography">
+     <!--l. 143--><p class="noindent" >Nathaniel  R.  Robinson  et  al.  &#8220;ChatGPT  MT:  Competitive  for  High-  (but  not  Low-)  Resource
      Languages&#8221;. In: (2023). <span 
 class="eccc1000-"><span 
 class="small-caps">d</span><span 
@@ -358,9 +350,9 @@ class="small-caps">o</span><span
 class="small-caps">i</span></span>:  <a 
 href="https://doi.org/10.48550/arXiv.2309.07423" >10.48550/arXiv.2309.07423</a>.
      </dd><dt id="X0-low-resource:cross-lingual-generalisation" class="thebibliography">
-[28]  </dt><dd 
-id="bib-16" class="thebibliography">
-     <!--l. 141--><p class="noindent" ><a 
+[31]  </dt><dd 
+id="bib-14" class="thebibliography">
+     <!--l. 143--><p class="noindent" ><a 
  id="cite.0@low-resource:cross-lingual-generalisation"></a>Anton  Schäfer  et  al.  <span 
 class="ecti-1000">Language  Imbalance  Can  Boost  Cross-lingual  Generalisation</span>.  2024.  <span 
 class="eccc1000-"><span 
@@ -368,19 +360,11 @@ class="small-caps">d</span><span
 class="small-caps">o</span><span 
 class="small-caps">i</span></span>:
      <a 
-href="https://doi.org/10.48550/arXiv.1906.04341" >10.48550/arXiv.1906.04341</a>.
-     </dd><dt id="X0-taylor2022access" class="thebibliography">
-[31]  </dt><dd 
-id="bib-17" class="thebibliography">
-     <!--l. 141--><p class="noindent" ><a 
- id="cite.0@taylor2022access"></a>Joshua  Taylor  and  Timothy  Kochem.  &#8220;Access  and  empowerment  in  digital  language  learning,
-     maintenance, and revival: a critical literature review&#8221;. In: <span 
-class="ecti-1000">Diaspora, Indigenous, and Minority Education</span>
-     16.4 (2022), pp.&#x00A0;234&#8211;245.
+href="https://doi.org/10.48550/arXiv.2404.07982" >10.48550/arXiv.2404.07982</a>.
      </dd><dt id="X0-rbmt:low_resource" class="thebibliography">
-[32]  </dt><dd 
-id="bib-18" class="thebibliography">
-     <!--l. 141--><p class="noindent" ><a 
+[35]  </dt><dd 
+id="bib-15" class="thebibliography">
+     <!--l. 143--><p class="noindent" ><a 
  id="cite.0@rbmt:low_resource"></a>Daniel Torregrosa et al. &#8220;Leveraging Rule-Based Machine Translation Knowledge for Under-Resourced
      Neural Machine Translation Models&#8221;. In: <span 
 class="ecti-1000">Proceedings of Machine Translation Summit XVII Volume</span>
@@ -394,16 +378,14 @@ class="small-caps">l</span></span>:
 <a 
 href="https://aclanthology.org/W19-6725/" class="url" ><span 
 class="ectt-1000">https://aclanthology.org/W19-6725/</span></a>.</dd></dl>
-                                                                                         
-                                                                                         
-<!--l. 146--><p class="noindent" >
+<!--l. 148--><p class="noindent" >
    <h4 class="likesubsectionHead"><a 
  id="x1-9000"></a>Work on RBMT (Rule-Based Machine Translation)</h4>
-<!--l. 146--><p class="noindent" >
+<!--l. 148--><p class="noindent" >
      <dl class="thebibliography"><dt id="X0-rbmt:aperterium" class="thebibliography">
-[11]  </dt><dd 
-id="bib-19" class="thebibliography">
-     <!--l. 146--><p class="noindent" ><a 
+[13]  </dt><dd 
+id="bib-16" class="thebibliography">
+     <!--l. 148--><p class="noindent" ><a 
  id="cite.0@rbmt:aperterium"></a>Tanmai Khanna et al. &#8220;Recent advances in Apertium, a free/open-source rule-based machine translation
      platform for low-resource languages&#8221;. In: <span 
 class="ecti-1000">Machine Translation </span>35.4 (Dec. 2021), pp.&#x00A0;475&#8211;502. <span 
@@ -418,10 +400,12 @@ class="small-caps">d</span><span
 class="small-caps">o</span><span 
 class="small-caps">i</span></span>:  <a 
 href="https://doi.org/10.1007/s10590-021-09260-6" >10.1007/s10590-021-09260-6</a>.
+                                                                                         
+                                                                                         
      </dd><dt id="X0-rbmt:workflows" class="thebibliography">
-[22]  </dt><dd 
-id="bib-20" class="thebibliography">
-     <!--l. 146--><p class="noindent" ><a 
+[25]  </dt><dd 
+id="bib-17" class="thebibliography">
+     <!--l. 148--><p class="noindent" ><a 
  id="cite.0@rbmt:workflows"></a>Tommi  A  Pirinen.  &#8220;Workflows  for  kickstarting  RBMT  in  virtually  No-Resource  Situation&#8221;.  In:
      <span 
 class="ecti-1000">Proceedings of the 2nd Workshop on Technologies for MT of Low Resource Languages</span>. Ed. by Alina
@@ -434,9 +418,9 @@ class="small-caps">l</span></span>: <a
 href="https://aclanthology.org/W19-6803" class="url" ><span 
 class="ectt-1000">https://aclanthology.org/W19-6803</span></a>.
      </dd><dt id="X0-rbmt:low_resource" class="thebibliography">
-[32]  </dt><dd 
-id="bib-21" class="thebibliography">
-     <!--l. 146--><p class="noindent" >Daniel Torregrosa et al. &#8220;Leveraging Rule-Based Machine Translation Knowledge for Under-Resourced
+[35]  </dt><dd 
+id="bib-18" class="thebibliography">
+     <!--l. 148--><p class="noindent" >Daniel Torregrosa et al. &#8220;Leveraging Rule-Based Machine Translation Knowledge for Under-Resourced
      Neural Machine Translation Models&#8221;. In: <span 
 class="ecti-1000">Proceedings of Machine Translation Summit XVII Volume</span>
      <span 
@@ -449,14 +433,14 @@ class="small-caps">l</span></span>:
 <a 
 href="https://aclanthology.org/W19-6725/" class="url" ><span 
 class="ectt-1000">https://aclanthology.org/W19-6725/</span></a>.</dd></dl>
-<!--l. 151--><p class="noindent" >
+<!--l. 153--><p class="noindent" >
    <h4 class="likesubsectionHead"><a 
  id="x1-10000"></a>Work on RAG (Retrieval Augmented Generation)</h4>
-<!--l. 151--><p class="noindent" >
+<!--l. 153--><p class="noindent" >
      <dl class="thebibliography"><dt id="X0-rag" class="thebibliography">
-[13]  </dt><dd 
-id="bib-22" class="thebibliography">
-     <!--l. 151--><p class="noindent" >Patrick S.&#x00A0;H. Lewis et al. &#8220;Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks&#8221;. In:
+[15]  </dt><dd 
+id="bib-19" class="thebibliography">
+     <!--l. 153--><p class="noindent" >Patrick S.&#x00A0;H. Lewis et al. &#8220;Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks&#8221;. In:
      <span 
 class="ecti-1000">Advances in Neural Information Processing Systems 33: Annual Conference on Neural Information</span>
      <span 
@@ -468,14 +452,14 @@ class="small-caps">r</span><span
 class="small-caps">l</span></span>: <a 
 href="https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html" class="url" ><span 
 class="ectt-1000">https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html</span></a>.</dd></dl>
-<!--l. 156--><p class="noindent" >
+<!--l. 158--><p class="noindent" >
    <h4 class="likesubsectionHead"><a 
  id="x1-11000"></a>Work on Embeddings &amp; Semantic Similarity</h4>
-<!--l. 156--><p class="noindent" >
+<!--l. 158--><p class="noindent" >
      <dl class="thebibliography"><dt id="X0-ss:testing_mt" class="thebibliography">
- [3]  </dt><dd 
-id="bib-23" class="thebibliography">
-     <!--l. 156--><p class="noindent" ><a 
+ [4]  </dt><dd 
+id="bib-20" class="thebibliography">
+     <!--l. 158--><p class="noindent" ><a 
  id="cite.0@ss:testing_mt"></a>Jialun Cao et al. &#8220;SemMT: A Semantic-Based Testing Approach for Machine Translation Systems&#8221;. In:
      <span 
 class="ecti-1000">ACM Trans. Softw. Eng. Methodol. </span>31.2 (Apr. 2022). <span 
@@ -490,9 +474,9 @@ class="small-caps">o</span><span
 class="small-caps">i</span></span>:  <a 
 href="https://doi.org/10.1145/3490488" >10.1145/3490488</a>.
      </dd><dt id="X0-ss:mteb" class="thebibliography">
-[17]  </dt><dd 
-id="bib-24" class="thebibliography">
-     <!--l. 156--><p class="noindent" ><a 
+[19]  </dt><dd 
+id="bib-21" class="thebibliography">
+     <!--l. 158--><p class="noindent" ><a 
  id="cite.0@ss:mteb"></a>Niklas Muennighoff et al. &#8220;MTEB: Massive Text Embedding Benchmark&#8221;. In: <span 
 class="ecti-1000">Proceedings of the 17th</span>
      <span 
@@ -505,12 +489,10 @@ class="small-caps">d</span><span
 class="small-caps">o</span><span 
 class="small-caps">i</span></span>:  <a 
 href="https://doi.org/10.18653/V1/2023.EACL-MAIN.148" >10.18653/V1/2023.EACL-MAIN.148</a>.
-                                                                                         
-                                                                                         
      </dd><dt id="X0-reimers-2019-sentence-bert" class="thebibliography">
-[25]  </dt><dd 
-id="bib-25" class="thebibliography">
-     <!--l. 156--><p class="noindent" ><a 
+[28]  </dt><dd 
+id="bib-22" class="thebibliography">
+     <!--l. 158--><p class="noindent" ><a 
  id="cite.0@reimers-2019-sentence-bert"></a>Nils   Reimers   and   Iryna   Gurevych.   &#8220;Sentence-BERT:   Sentence   Embeddings   using   Siamese
      BERT-Networks&#8221;. In: <span 
 class="ecti-1000">Proceedings of the 2019 Conference on Empirical Methods in Natural Language</span>
@@ -522,9 +504,9 @@ class="small-caps">o</span><span
 class="small-caps">i</span></span>:  <a 
 href="https://doi.org/10.48550/arXiv.1908.10084" >10.48550/arXiv.1908.10084</a>.
      </dd><dt id="X0-ss:eval_mt" class="thebibliography">
-[30]  </dt><dd 
-id="bib-26" class="thebibliography">
-     <!--l. 156--><p class="noindent" ><a 
+[33]  </dt><dd 
+id="bib-23" class="thebibliography">
+     <!--l. 158--><p class="noindent" ><a 
  id="cite.0@ss:eval_mt"></a>Yurun Song, Junchen Zhao, and Lucia Specia. &#8220;SentSim: Crosslingual Semantic Evaluation of Machine
      Translation&#8221;. In: <span 
 class="ecti-1000">Proceedings of the 2021 Conference of the North American Chapter of the Association</span>
@@ -538,14 +520,16 @@ class="small-caps">d</span><span
 class="small-caps">o</span><span 
 class="small-caps">i</span></span>:  <a 
 href="https://doi.org/10.18653/V1/2021.NAACL-MAIN.252" >10.18653/V1/2021.NAACL-MAIN.252</a>.</dd></dl>
-<!--l. 161--><p class="noindent" >
+                                                                                         
+                                                                                         
+<!--l. 163--><p class="noindent" >
    <h4 class="likesubsectionHead"><a 
  id="x1-12000"></a>Work on Linguistic Probing</h4>
-<!--l. 161--><p class="noindent" >
+<!--l. 163--><p class="noindent" >
      <dl class="thebibliography"><dt id="X0-probing:bert" class="thebibliography">
- [5]  </dt><dd 
-id="bib-27" class="thebibliography">
-     <!--l. 161--><p class="noindent" ><a 
+ [6]  </dt><dd 
+id="bib-24" class="thebibliography">
+     <!--l. 163--><p class="noindent" ><a 
  id="cite.0@probing:bert"></a>Kevin Clark et al. &#8220;What Does BERT Look at? An Analysis of BERT&#8217;s Attention&#8221;. In: <span 
 class="ecti-1000">Proceedings</span>
      <span 
@@ -558,30 +542,67 @@ class="small-caps">d</span><span
 class="small-caps">o</span><span 
 class="small-caps">i</span></span>:  <a 
 href="https://doi.org/10.18653/V1/W19-4828" >10.18653/V1/W19-4828</a>.</dd></dl>
-<!--l. 172--><p class="noindent" >
+<!--l. 174--><p class="noindent" >
    <h4 class="likesubsectionHead"><a 
  id="x1-13000"></a>Other References</h4>
-<!--l. 172--><p class="noindent" >
-     <dl class="thebibliography"><dt id="X0-to-remain-an-indian" class="thebibliography">
-[14]  </dt><dd 
+<!--l. 174--><p class="noindent" >
+     <dl class="thebibliography"><dt id="X0-baird" class="thebibliography">
+ [1]  </dt><dd 
+id="bib-25" class="thebibliography">
+     <!--l. 174--><p class="noindent" ><a 
+ id="cite.0@baird"></a>Jessie Little Doe Baird. &#8220;Wopanaak language reclamation program: bringing the language home&#8221;.
+     Journal of Global Indigeneity, 2(2). 2016. <span 
+class="eccc1000-"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>: <a 
+href="https://ro.uow.edu.au/jgi/vol2/iss2/7" class="url" ><span 
+class="ectt-1000">https://ro.uow.edu.au/jgi/vol2/iss2/7</span></a>.
+     </dd><dt id="X0-atoms" class="thebibliography">
+ [2]  </dt><dd 
+id="bib-26" class="thebibliography">
+     <!--l. 174--><p class="noindent" ><a 
+ id="cite.0@atoms"></a>Mark C Baker. <span 
+class="ecti-1000">The atoms of language: The mind&#8217;s hidden rules of grammar</span>. Basic books, 2008.
+     </dd><dt id="X0-CoronelMolina2016IndigenousLR" class="thebibliography">
+ [8]  </dt><dd 
+id="bib-27" class="thebibliography">
+     <!--l. 174--><p class="noindent" ><a 
+ id="cite.0@CoronelMolina2016IndigenousLR"></a>Serafín  M.  Coronel-Molina  and  Teresa  L.  McCarty.  &#8220;Indigenous  Language  Revitalization  in  the
+     Americas&#8221;. In: 2016. <span 
+class="eccc1000-"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>: <a 
+href="https://api.semanticscholar.org/CorpusID:217243422" class="url" ><span 
+class="ectt-1000">https://api.semanticscholar.org/CorpusID:217243422</span></a>.
+     </dd><dt id="X0-through-the-language-glass" class="thebibliography">
+ [9]  </dt><dd 
 id="bib-28" class="thebibliography">
-     <!--l. 172--><p class="noindent" ><a 
+     <!--l. 174--><p class="noindent" ><a 
+ id="cite.0@through-the-language-glass"></a>Guy  Deutscher.  <span 
+class="ecti-1000">Through  the  language  glass:  Why  the  world  looks  different  in  other  languages</span>.
+     Metropolitan books, 2010.
+     </dd><dt id="X0-to-remain-an-indian" class="thebibliography">
+[16]  </dt><dd 
+id="bib-29" class="thebibliography">
+     <!--l. 174--><p class="noindent" ><a 
  id="cite.0@to-remain-an-indian"></a>K Tsianina Lomawaima and Teresa L McCarty. <span 
 class="ecti-1000">"To remain an Indian": Lessons in democracy from a</span>
      <span 
 class="ecti-1000">century of Native American education</span>. Teachers College Press, 2006.
      </dd><dt id="X0-genocide" class="thebibliography">
-[15]  </dt><dd 
-id="bib-29" class="thebibliography">
-     <!--l. 172--><p class="noindent" ><a 
+[17]  </dt><dd 
+id="bib-30" class="thebibliography">
+     <!--l. 174--><p class="noindent" ><a 
  id="cite.0@genocide"></a>Benjamin Madley. <span 
 class="ecti-1000">An American Genocide: The United States and the California Indian Catastrophe,</span>
      <span 
 class="ecti-1000">1846-1873</span>. Yale University Press, 2016.
      </dd><dt id="X0-atlas_endangered_languages" class="thebibliography">
-[16]  </dt><dd 
-id="bib-30" class="thebibliography">
-     <!--l. 172--><p class="noindent" ><a 
+[18]  </dt><dd 
+id="bib-31" class="thebibliography">
+     <!--l. 174--><p class="noindent" ><a 
  id="cite.0@atlas_endangered_languages"></a>Christopher Moseley. <span 
 class="ecti-1000">Atlas of the World&#8217;s Languages in Danger</span>. Unesco, 2010. <span 
 class="eccc1000-"><span 
@@ -589,10 +610,16 @@ class="small-caps">i</span><span
 class="small-caps">s</span><span 
 class="small-caps">b</span><span 
 class="small-caps">n</span></span>: 978-92-3-104096-2.
+     </dd><dt id="X0-language-instinct" class="thebibliography">
+[24]  </dt><dd 
+id="bib-32" class="thebibliography">
+     <!--l. 174--><p class="noindent" ><a 
+ id="cite.0@language-instinct"></a>Steven Pinker. <span 
+class="ecti-1000">The language instinct: How the mind creates language</span>. Penguin uK, 2003.
      </dd><dt id="X0-mnr" class="thebibliography">
-[29]  </dt><dd 
-id="bib-31" class="thebibliography">
-     <!--l. 172--><p class="noindent" ><a 
+[32]  </dt><dd 
+id="bib-33" class="thebibliography">
+     <!--l. 174--><p class="noindent" ><a 
  id="cite.0@mnr"></a>SIL  International.  <span 
 class="ecti-1000">639  Identifier  Documentation:  mnr</span>.  Accessed:  11  Mar  2024.  2024.  <span 
 class="eccc1000-"><span 
@@ -601,7 +628,17 @@ class="small-caps">r</span><span
 class="small-caps">l</span></span>:  
 <a 
 href="https://iso639-3.sil.org/code/mnr" class="url" ><span 
-class="ectt-1000">https://iso639-3.sil.org/code/mnr</span></a>.</dd></dl>
+class="ectt-1000">https://iso639-3.sil.org/code/mnr</span></a>.
+                                                                                         
+                                                                                         
+     </dd><dt id="X0-taylor2022access" class="thebibliography">
+[34]  </dt><dd 
+id="bib-34" class="thebibliography">
+     <!--l. 174--><p class="noindent" ><a 
+ id="cite.0@taylor2022access"></a>Joshua  Taylor  and  Timothy  Kochem.  &#8220;Access  and  empowerment  in  digital  language  learning,
+     maintenance, and revival: a critical literature review&#8221;. In: <span 
+class="ecti-1000">Diaspora, Indigenous, and Minority Education</span>
+     16.4 (2022), pp.&#x00A0;234&#8211;245.</dd></dl>
     
 </body></html> 
 

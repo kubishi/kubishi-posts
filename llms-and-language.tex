@@ -34,7 +34,7 @@
 \newcommand*{\doi}[1]{DOI: \href{http://dx.doi.org/#1}{#1}}\setitemize{noitemsep,topsep=5pt,parsep=2pt,partopsep=0pt}
 
 % bibliography
-\addbibresource{main.bib}
+\addbibresource{llms-and-language.bib}
 % Redefine the bibliography heading to use \subsection size
 \defbibheading{bibsection}[title]{%
   \subsection*{#1}%
@@ -63,9 +63,9 @@
 
 
 \section*{Introduction}
-This is an informal, ever-changing collection of interesting papers related to current limitations and potential in Large Language Models (LLMs) for low- and no-resource language tasks.
-LLMs have been shown to exhibit remarkable capability for a wide variety of natural language tasks including machine translation, summarizing, question-and-answering, auto-completion, dialog, and more~\cite{gpt:agi}.
-LLMs are trained on vast amounts of natural language data from the internet~\cite{gpt:gpt4-tech-report} and, as a result, do not perform as well for low- or no-resource languages~\cite{palm,gpt:low-resource-translation}.
+This is an informal, ever-changing collection of interesting papers and resources related to Large Language Models (LLMs) and language revitalization.
+LLMs have been shown to be remarkably capable at a wide variety of natural language tasks including machine translation, summarizing, question-and-answering, auto-completion, dialog, and more~\cite{gpt:agi}.
+State-of-the-art LLMs are trained on vast amounts of natural language data from the internet~\cite{gpt:gpt4-tech-report} and, as a result, do not perform as well on tasks that involve low/no-resource languages~\cite{palm,gpt:low-resource-translation}.
 We refer to languages with very little publicly available bilingual or monolingual corpora as ``low-resource'' languages and those with \textit{no} publicly available corpora as ``no-resource'' languages.
 
 \subsection*{Research Questions}
@@ -73,26 +73,26 @@ In exploring how LLMs might be used for endangered language preservation and rev
 \begin{itemize}
     \item How do models ``know'' language? This is important for understanding how they might be taught new languages from scratch. By taught, I don't mean fine-tuned or trained (in the ML sense of the word ``train''). Rather, I mean \textit{taught} like a human is taught language: through dialog, question and answering, context, and experience.
     \begin{itemize}
-        \item Black-box experimentation: The past few decades have seen many advances in linguistics through creative black-box experiments.
+        \item Black-box experimentation: The past few decades have seen many advances in linguistics through creative black-box experiments~\cite{atoms,through-the-language-glass,language-instinct}. Can these be recreated with LLMs? How might the results differ and what might that tell us about how LLMs ``know'' language?
         \item Linguistic Probing: We can perform experiments and ``brain-scan'' models to see which parts of the underlying network activate to better understand how they work! Interestingly, this has only relatively recently become possible (still with extreme limitations) for humans (via MRI).
         \item We care less about whether or not LLMs learn \textit{like} humans and more about understanding how LLMs learn so that we can leverage the knowledge to build useful tools for low/no-resource languages.
     \end{itemize}
     \item How can we use popular LLM tool-building techniques to create tools for the documentation, preservation, and revitalization of endangered languages?
     \begin{itemize}
-        \item In the context window: few-shot learning, prompt engineering, function calling. We proposed a new approach for low/no-resource language machine translation using a combination of these techniques~\cite{llm-rbmt}.
+        \item In the context window: few-shot learning, prompt engineering, function calling, etc. We proposed a new approach for low/no-resource language machine translation using a combination of these techniques~\cite{llm-rbmt}.
         \item Tokenization: Can adding tokens for target language words help with natural language tasks?
-        \item Finetuning: with limited data, fine-tuning is difficult.
+        \item Fine-tuning: with limited data, fine-tuning is difficult.
     \end{itemize}
     \item How can LLMs be used for foreign language education
     \begin{itemize}
         \item Ultimately, the goal of endangered language revitalization is to create new \textit{human} speakers.
-        \item How can LLMs be used effectively in language education?
+        \item How can LLMs be used effectively in language education? We proposed a new approach for using LLMs as practice partners and tutors for language learning~\cite{yu2023chatlang}.
     \end{itemize}
 \end{itemize}
 
 \subsection*{Useful Tools Enabled by Research}
 Pursuing the above research questions will guide and enable the development of many practically useful tools for endangered language revitalization.
-Some of these tools include:
+Some of these include:
 \begin{itemize}
     \item Parsing linguistic literature for grammar, vocabulary, etc.
     \item Summarizing/explaining content for language learners
@@ -103,20 +103,22 @@ Some of these tools include:
 \end{itemize}
 
 \subsection*{Special Concerns for Indigenous Communities}
-When working with indigenous communities in language revitalization, history and context matter.
+When working on language revitalization efforts with indigenous communities, history and context matter.
 Genocide and forced assimilation~\cite{genocide} have led to the endangerment of many indigenous cultures and languages throughout the United States.
-In Boarding Schools, indigenous children were forced to abandon their languages and cultures in favor of English and Christianity~\cite{to-remain-an-indian}.
+At Indian boarding schools, which were established to turn the surviving indigenous population into a servile class, children were forced to abandon their native languages and cultures~\cite{to-remain-an-indian}.
 
-Even more modern efforts in language documentation and revitalization can be harmful.
-My tribe, for example, prohibits the telling of traditional stories except in the winter months.
-To document these stories and make them publicly available would violate this important tradition.
+Even the more modern and well-intentioned efforts to document and revitalize indigenous languages are not without their own ethical concerns.
+My tribe, for example, prohibits telling some traditional stories except during the winter.
+To document these stories and make them publicly available throughout the year would undermine this culturally important tradition.
 Different indigenous communities have different boundaries and rules for what is appropriate to share and what is not.
 It is important to respect these boundaries and to work with communities to ensure that the work being done is culturally appropriate and respectful.
 
-Finally, it is imperative that indigenous communities reap the benefits of the work being done to document and revitalize their languages.
+Finally, it is imperative that indigenous communities benefit from the work being done to document and revitalize their languages.
 This means that the tools and resources developed should be made available to the communities in a way that is accessible and useful to them.
-Another personal example: my great-grandmother was a fluent speaker of our language and so was the subject of a study on our language by a University of California, San Diego Ph.D. student studying linguistics.
-His thesis "A Grammar Sketch And Comparative Study Of Eastern Mono"~\cite{mnr_grammar} is locked behind a Proquest academic paywall and almost impossible for my family and other tribal members to access.
+Another personal example: my great-grandmother was a fluent speaker of our language and so was the subject of a study by the University of California, San Diego Ph.D. student, Evan Norris.
+His thesis "A Grammar Sketch And Comparative Study Of Eastern Mono"~\cite{mnr_grammar}, an invaluable resource for our critically endangered language, is locked behind a ProQuest academic paywall and is almost impossible for my family and other tribal members to access.
+
+In our research on using LLMs for endangered language revitalization, we commit to respecting the boundaries and rules of the communities we work with and to making the research output accessible and useful to those communities.
 
 \newpage
 \section*{Bibliography}
