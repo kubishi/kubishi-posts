@@ -2,11 +2,12 @@
 
 git clean -fX
 
-# build bibliography with bibtex
+# build main.tex, main.bib with biblatex
 pdflatex main.tex
-bibtex main
+biber main
 pdflatex main.tex
 pdflatex main.tex
+
 
 # build html with numbered references
 htlatex main.tex
