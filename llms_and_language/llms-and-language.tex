@@ -63,7 +63,7 @@
 
 
 \section*{Introduction}
-This is an informal, ever-changing collection of interesting papers and resources related to Large Language Models (LLMs) and language revitalization.
+This document is meant to be an informal, ever-changing collection of interesting papers and resources related to Large Language Models (LLMs) and language revitalization.
 LLMs have been shown to be remarkably capable at a wide variety of natural language tasks including machine translation, summarizing, question-and-answering, auto-completion, dialog, and more~\cite{gpt:agi}.
 State-of-the-art LLMs are trained on vast amounts of natural language data from the internet~\cite{gpt:gpt4-tech-report} and, as a result, do not perform as well on tasks that involve low/no-resource languages~\cite{palm,gpt:low-resource-translation}.
 We refer to languages with very little publicly available bilingual or monolingual corpora as ``low-resource'' languages and those with \textit{no} publicly available corpora as ``no-resource'' languages.
@@ -119,6 +119,25 @@ Another personal example: my great-grandmother was a fluent speaker of our langu
 His thesis "A Grammar Sketch And Comparative Study Of Eastern Mono"~\cite{mnr_grammar}, an invaluable resource for our critically endangered language, is locked behind a ProQuest academic paywall and is almost impossible for my family and other tribal members to access.
 
 In our research on using LLMs for endangered language revitalization, we commit to respecting the boundaries and rules of the communities we work with and to making the research output accessible and useful to those communities.
+
+\section*{Notes on Papers}
+This section contains notes, summaries, and thoughts on some of the papers in the bibliography below.
+
+\subsection*{Linguistic Probing}
+\citetitle{probing:neural}~\cite{probing:neural} is a very nice introduction to linguistic probing.
+The following excerpt, in particular, is very helpful in understanding the probing technique in general:
+\begin{quote}
+    As a simple example, we train an English-French NMT system on 110M tokens of bilingual data (English side). We then take 10K separate English sentences and label their voice as active or passive. We use the learned NMT encoder to convert these sentences into 10k corresponding 1000-dimension encoding vectors. We use 9000 sentences to train a logistic regression model to predict voice using the encoding cell states, and test on the other 1000 sentences. We achieve 92.8\% accuracy (Table 2), far above the majority class baseline (82.8\%). This means that in reducing the source sentence to a fixed-length vector, the NMT system has decided to store the voice of English sentences in an easily accessible way. When we carry out the same experiment on an English-English (auto-encoder) system, we find that English voice information is no longer easily accessed from the encoding vector. We can only predict it with 82.7\% accuracy, no better than chance. Thus, in learning to reproduce input English sentences, the seq2seq model decides to use the fixed-length encoding vector for other purposes.
+\end{quote}
+
+So, in general, the idea behind probing is to see whether a model is learning to encode certain known linguistic features as a byproduct of learning to perform a given task.
+In particular, this example explores how the model is learning to encode the voice of the sentence (active or passive) as a linear combination of the encoding vectors.
+Note that this approach is \textit{not} capable of telling us about linguistic features that may be encoded in a non-linear way, but it is a good start.
+
+The paper \citeauthor{probing:bert}~\cite{probing:bert} is a very interesting follow-up to the previous paper that applies the probing technique to BERT and explores how different attention heads encode different linguistic features.
+The paper \citeauthor{probing:parse-trees}~\cite{probing:parse-trees} uses probing techniques to perform experiments that suggest the BERT encoder is learning to encode parse tree distances in its hidden states.
+
+
 
 \newpage
 \section*{Bibliography}

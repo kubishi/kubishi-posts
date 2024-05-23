@@ -107,7 +107,7 @@
     year = "2019",
     address = "Dublin, Ireland",
     publisher = "European Association for Machine Translation",
-    url = "https://aclanthology.org/W19-6803",
+    doi= {10.18653/V1/W19-6803},
     pages = "11--16",
     keywords={rbmt}
 }
@@ -385,29 +385,6 @@
   url={https://anrg.usc.edu/www/papers/chatlang.pdf}
 }
 
-@inproceedings{probing:bert,
-  author       = {Kevin Clark and
-                  Urvashi Khandelwal and
-                  Omer Levy and
-                  Christopher D. Manning},
-  editor       = {Tal Linzen and
-                  Grzegorz Chrupala and
-                  Yonatan Belinkov and
-                  Dieuwke Hupkes},
-  title        = {What Does {BERT} Look at? An Analysis of BERT's Attention},
-  booktitle    = {Proceedings of the 2019 {ACL} Workshop BlackboxNLP: Analyzing and
-                  Interpreting Neural Networks for NLP, BlackboxNLP@ACL 2019, Florence,
-                  Italy, August 1, 2019},
-  pages        = {276--286},
-  publisher    = {Association for Computational Linguistics},
-  year         = {2019},
-  doi          = {10.18653/V1/W19-4828},
-  timestamp    = {Sun, 12 Nov 2023 02:16:34 +0100},
-  biburl       = {https://dblp.org/rec/conf/blackboxnlp/ClarkKLM19.bib},
-  bibsource    = {dblp computer science bibliography, https://dblp.org},
-  keywords     = {linguistic-probing}
-}
-
 @misc{low-resource:cross-lingual-generalisation,
       title={Language Imbalance Can Boost Cross-lingual Generalisation}, 
       author={Anton Schäfer and Shauli Ravfogel and Thomas Hofmann and Tiago Pimentel and Imanol Schlag},
@@ -469,4 +446,57 @@
   year={2003},
   publisher={Penguin uK},
   keywords={other}
+}
+
+@inproceedings{probing:neural,
+  title={Does string-based neural MT learn source syntax?},
+  author={Shi, Xing and Padhi, Inkit and Knight, Kevin},
+  booktitle={Proceedings of the 2016 conference on empirical methods in natural language processing},
+  pages={1526--1534},
+  year={2016},
+  doi= {10.18653/V1/D16-1159},
+  keywords={linguistic-probing}
+}
+
+@inproceedings{probing:bert,
+  author       = {Kevin Clark and
+                  Urvashi Khandelwal and
+                  Omer Levy and
+                  Christopher D. Manning},
+  editor       = {Tal Linzen and
+                  Grzegorz Chrupala and
+                  Yonatan Belinkov and
+                  Dieuwke Hupkes},
+  title        = {What Does {BERT} Look at? An Analysis of BERT's Attention},
+  booktitle    = {Proceedings of the 2019 {ACL} Workshop BlackboxNLP: Analyzing and
+                  Interpreting Neural Networks for NLP, BlackboxNLP@ACL 2019, Florence,
+                  Italy, August 1, 2019},
+  pages        = {276--286},
+  publisher    = {Association for Computational Linguistics},
+  year         = {2019},
+  doi          = {10.18653/V1/W19-4828},
+  timestamp    = {Sun, 12 Nov 2023 02:16:34 +0100},
+  biburl       = {https://dblp.org/rec/conf/blackboxnlp/ClarkKLM19.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org},
+  keywords     = {linguistic-probing}
+}
+
+@article{probing:parse-trees,
+  author       = {Christopher D. Manning and
+                  Kevin Clark and
+                  John Hewitt and
+                  Urvashi Khandelwal and
+                  Omer Levy},
+  title        = {Emergent linguistic structure in artificial neural networks trained
+                  by self-supervision},
+  journal      = {Proc. Natl. Acad. Sci. {USA}},
+  volume       = {117},
+  number       = {48},
+  pages        = {30046--30054},
+  year         = {2020},
+  doi          = {10.1073/PNAS.1907367117},
+  timestamp    = {Tue, 01 Jun 2021 09:59:40 +0200},
+  biburl       = {https://dblp.org/rec/journals/pnas/ManningCHKL20.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org},
+  keywords={linguistic-probing}
 }

@@ -155,5 +155,3 @@ dt.thebibliography {float:left; clear:left; margin-right:1em;}
 dl.enumerate-enumitem{display:grid; grid-template-columns: 3ch 1fr; align-items: top; row-gap:1ch;}
 /* end css.sty */
 
-/* remove padding from span */
-span { padding: 0 !important; }
